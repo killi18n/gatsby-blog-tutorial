@@ -1,16 +1,19 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
+import SEO from "../components/seo"
 import "./index.css"
 // import Layout from "../components/layout__"
 // import Image from "../components/image"
-// import SEO from "../components/seo"
 
 const IndexPage = ({ data }) => (
-  <Layout
-    data={data}
-    avatarUrl="https://avatars2.githubusercontent.com/u/47375524?s=400&u=9c6488c70f08ac60577aff332f10fe50d6cecfd2&v=4"
-  />
+  <>
+    <SEO title="evals4dead" meta="evals4dead's blog" keywords={[`react`, `javascript`, `nodejs`]} description="evals4dead's programming blog" />
+    <Layout
+      data={data}
+      avatarUrl="https://avatars2.githubusercontent.com/u/47375524?s=400&u=9c6488c70f08ac60577aff332f10fe50d6cecfd2&v=4"
+    />
+  </>
   // <StaticQuery
   //   query={graphql`
   //     query {

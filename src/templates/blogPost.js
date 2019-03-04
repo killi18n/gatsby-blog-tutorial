@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Footer from "../components/Footer"
+import SEO from '../components/seo';
 import "./blogPost.scss"
 import "prismjs/themes/prism-okaidia.css"
 
@@ -10,6 +11,8 @@ const Template = ({ data, pageContext }) => {
   const title = markdownRemark.frontmatter.title
   const html = markdownRemark.html
   return (
+    <>
+    <SEO title={title} meta="evals4dead's blog" keywords={[`react`, `javascript`, `nodejs`]} description="evals4dead's programming blog" />
     <div className="BlogPostWrapper">
       <div className="TitleBar">
         <h1>{title}</h1>
@@ -34,6 +37,7 @@ const Template = ({ data, pageContext }) => {
         githubLink="https://github.com/evals4dead"
       />
     </div>
+    </>
   )
 }
 
