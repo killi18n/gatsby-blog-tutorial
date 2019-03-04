@@ -1,0 +1,51 @@
+@import "~open-color/open-color";
+
+.Footer {
+  height: 8rem;
+  background: $oc-gray-4;
+
+  display: flex;
+  align-items: center;
+
+  .ImageWrapper {
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    img {
+      width: 4rem;
+      height: 4rem;
+      margin-bottom: 0px;
+
+      border-radius: 50%;
+      border: 1px solid $oc-gray-3;
+      cursor: pointer;
+
+      &:hover {
+        animation: scaler 0.5s ease-in both;
+      }
+
+      &:active {
+        border: 1px solid $oc-gray-8;
+      }
+    }
+  }
+}
+
+@keyframes scaler {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1.05, 1.05);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  75% {
+    transform: scale(1.05, 1.05);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}

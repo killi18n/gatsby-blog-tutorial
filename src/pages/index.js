@@ -7,7 +7,10 @@ import "./index.css"
 // import SEO from "../components/seo"
 
 const IndexPage = ({ data }) => (
-  <Layout data={data} />
+  <Layout
+    data={data}
+    avatarUrl="https://avatars2.githubusercontent.com/u/47375524?s=400&u=9c6488c70f08ac60577aff332f10fe50d6cecfd2&v=4"
+  />
   // <StaticQuery
   //   query={graphql`
   //     query {
@@ -47,6 +50,7 @@ export const query = graphql`
             title
             path
             date
+            excerpt
           }
         }
       }

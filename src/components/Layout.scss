@@ -1,9 +1,54 @@
-.LayoutWrapper {
-  height: calc(100vh);
-  font-family: "avenir";
+@import "~include-media/dist/include-media";
+@import "~open-color/open-color";
 
-  a {
-    text-decoration: none;
-    color: inherit;
+.LayoutWrapper {
+  // min-height: calc(100vh - 8rem);
+  font-family: "avenir";
+  background: $oc-gray-0;
+
+  // a {
+  //   text-decoration: none;
+  //   color: inherit;
+  // }
+
+  main {
+    min-height: calc(100vh - 13rem);
+  }
+
+  .PostList {
+    background: white;
+    margin: 0 auto;
+
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    @include media("<=590px") {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+
+    border: 1px solid #f1f3f5;
+
+    .PostItem {
+      height: 8rem;
+      padding: 1.25rem;
+
+      .PostTitle {
+        font-weight: 700;
+        font-size: 2rem;
+      }
+
+      .PostPreview {
+        font-size: 1.25rem;
+        margin-top: 1rem;
+      }
+    }
+
+    .PostItem + .PostItem {
+      // margin-top: 1rem;
+      border-top: 1px solid #f1f3f5;
+    }
   }
 }
