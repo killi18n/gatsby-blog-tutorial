@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 import "./Header.scss"
 
 const TitleAndDescription = ({ data }) => {
@@ -8,8 +8,10 @@ const TitleAndDescription = ({ data }) => {
 
   return (
     <div className="HeaderWrapper">
-      <div>{title}</div>
-      <div>{description}</div>
+      <Link to="/" className="title">
+        {title}
+      </Link>
+      <div className="description">{description}</div>
     </div>
   )
 }

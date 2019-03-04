@@ -1,4 +1,9 @@
 .LayoutWrapper {
   height: calc(100vh);
   font-family: "avenir";
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
