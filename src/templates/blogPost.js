@@ -1,9 +1,23 @@
 import React from "react"
-import { graphql, StaticQuery } from "gatsby"
+import { graphql, Link } from "gatsby"
 
-const Template = ({ data }) => {
-  console.log(data)
-  return <div>BlogPostHere</div>
+const Template = ({ data, pageContext }) => {
+  const { next, prev } = pageContext
+  const { markdownRemark } = data
+  const title = markdownRemark.frontmatter.title
+  const html = markdownRemark.html
+  return (
+    <div>
+      <h1 style={{ fontFamily: "avenir" }}>{title}</h1>
+      <div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
+      <div style={{ marginBottom: "1rem", fontFamily: "avenir" }}>
+        {next && <Link to={next.frontmatter.path}>Next</Link>}
+      </div>
+      <div style={{ marginBottom: "1rem", fontFamily: "avenir" }}>
+        {prev && <Link to={prev.frontmatter.path}>Prev</Link>}
+      </div>
+    </div>
+  )
 }
 
 export const query = graphql`
@@ -11,6 +25,9 @@ export const query = graphql`
     markdownRemark(frontmatter: { path: { eq: $pathSlug } }) {
       id
       html
+      frontmatter {
+        title
+      }
     }
   }
 `
