@@ -1,0 +1,42 @@
+@import "~open-color/open-color";
+
+.BlogPostWrapper {
+  .TitleBar {
+    height: 8rem;
+    background: $oc-grape-7;
+
+    display: flex;
+    align-items: center;
+
+    h1 {
+      margin-bottom: 0;
+      margin-left: 1rem;
+      color: white;
+    }
+  }
+
+  .BlogPost {
+    min-height: calc(100vh - 16rem);
+    margin-left: 12rem;
+    margin-right: 12rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .Navigator {
+    margin-left: 12rem;
+    margin-right: 12rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-decoration: underline;
+    color: $oc-grape-7;
+
+    display: flex;
+    flex-direction: row;
+
+    .next {
+      margin-left: auto;
+    }
+  }
+}

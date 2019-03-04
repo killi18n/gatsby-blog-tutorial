@@ -405,7 +405,8 @@ pre {
   margin-bottom: 1.45rem;
   font-size: 0.85rem;
   line-height: 1.42;
-  background: hsla(0, 0%, 0%, 0.04);
+  /* background: hsla(0, 0%, 0%, 0.04); */
+  background: hsla(207, 95%, 15%, 1);
   border-radius: 3px;
   overflow: auto;
   word-wrap: normal;
@@ -592,13 +593,14 @@ td:last-child {
 }
 tt,
 code {
-  background-color: hsla(0, 0%, 0%, 0.04);
+  background-color: hsla(207, 95%, 15%, 1);
   border-radius: 3px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
+  font-family: "avenir";
+  font-weight: 500;
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
+  color: white;
 }
 pre code {
   background: none;

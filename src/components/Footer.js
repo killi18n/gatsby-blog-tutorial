@@ -2,12 +2,12 @@ import React from "react"
 import "./Footer.scss"
 import { Link } from "gatsby"
 
-const Footer = ({ avatarUrl }) => {
+const Footer = ({ avatarUrl, githubLink }) => {
   return (
     <div className="Footer">
-      <Link className="ImageWrapper" to="/about">
+      <a href={githubLink} className="ImageWrapper" to="/about">
         <img src={avatarUrl} />
-      </Link>
+      </a>
     </div>
   )
 }

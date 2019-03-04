@@ -34,7 +34,10 @@ const Layout = ({ data, avatarUrl }) => {
           })}
         </div>
       </main>
-      <Footer avatarUrl={avatarUrl} />
+      <Footer
+        avatarUrl={avatarUrl}
+        githubLink="https://github.com/evals4dead"
+      />
       {/* <div style={{ marginTop: "1rem" }}>
         <Link to="/tags">Browse by Tag</Link>
       </div> */}

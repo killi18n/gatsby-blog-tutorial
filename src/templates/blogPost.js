@@ -1,5 +1,8 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import Footer from "../components/Footer"
+import "./blogPost.scss"
+import "prismjs/themes/prism-okaidia.css"
 
 const Template = ({ data, pageContext }) => {
   const { next, prev } = pageContext
@@ -7,15 +10,29 @@ const Template = ({ data, pageContext }) => {
   const title = markdownRemark.frontmatter.title
   const html = markdownRemark.html
   return (
-    <div>
-      <h1 style={{ fontFamily: "avenir" }}>{title}</h1>
-      <div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
-      <div style={{ marginBottom: "1rem", fontFamily: "avenir" }}>
-        {next && <Link to={next.frontmatter.path}>Next</Link>}
+    <div className="BlogPostWrapper">
+      <div className="TitleBar">
+        <h1>{title}</h1>
       </div>
-      <div style={{ marginBottom: "1rem", fontFamily: "avenir" }}>
-        {prev && <Link to={prev.frontmatter.path}>Prev</Link>}
+      <div className="BlogPost" dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="Navigator">
+        {prev && (
+          <Link className="prev" to={prev.frontmatter.path}>
+            &lt;-{prev.frontmatter.title}
+          </Link>
+        )}
+        {next && (
+          <Link className="next" to={next.frontmatter.path}>
+            {next.frontmatter.title}-&gt;
+          </Link>
+        )}
       </div>
+      <Footer
+        avatarUrl={
+          "https://avatars2.githubusercontent.com/u/47375524?s=400&u=9c6488c70f08ac60577aff332f10fe50d6cecfd2&v=4"
+        }
+        githubLink="https://github.com/evals4dead"
+      />
     </div>
   )
 }
