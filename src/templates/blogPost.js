@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import Footer from "../components/Footer"
-import SEO from '../components/seo';
+import SEO from "../components/seo"
+import PageWrapper from "../components/structures/PageWrapper"
 import "./blogPost.scss"
 import "prismjs/themes/prism-okaidia.css"
 
@@ -11,14 +11,19 @@ const Template = ({ data, pageContext }) => {
   const title = markdownRemark.frontmatter.title
   const html = markdownRemark.html
   return (
-    <>
-    <SEO title={title} meta="evals4dead's blog" keywords={[`react`, `javascript`, `nodejs`]} description="evals4dead's programming blog" />
-    <div className="BlogPostWrapper">
-      <div className="TitleBar">
+    <PageWrapper>
+      <SEO
+        title={title}
+        keywords={[`react`, `javascript`, `nodejs`]}
+        description="evals4dead's programming blog"
+      />
+      <div className="PostTitle__">
         <h1>{title}</h1>
       </div>
       <div className="BlogPost" dangerouslySetInnerHTML={{ __html: html }} />
-      <div className="Navigator">
+      {
+        title !== 'My Projects' && (
+          <div className="Navigator">
         {prev && (
           <Link className="prev" to={prev.frontmatter.path}>
             &lt;-{prev.frontmatter.title}
@@ -30,14 +35,9 @@ const Template = ({ data, pageContext }) => {
           </Link>
         )}
       </div>
-      <Footer
-        avatarUrl={
-          "https://avatars2.githubusercontent.com/u/47375524?s=400&u=9c6488c70f08ac60577aff332f10fe50d6cecfd2&v=4"
-        }
-        githubLink="https://github.com/evals4dead"
-      />
-    </div>
-    </>
+        )
+      }
+    </PageWrapper>
   )
 }
 

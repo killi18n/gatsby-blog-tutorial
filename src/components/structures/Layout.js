@@ -1,18 +1,16 @@
 import React from "react"
 import { Link } from "gatsby"
-import Header from "./Header"
+import PageWrapper from "./PageWrapper"
 import "./Layout.scss"
-import Footer from "./Footer"
 
 const Layout = ({ data, avatarUrl }) => {
   const {
     allMarkdownRemark: { edges },
   } = data
   return (
-    <div className="LayoutWrapper">
-      <Header />
-      <main>
-        <div className="PostList">
+    <PageWrapper>
+      <div className="PostList">
+        <div className="innerPostList">
           {edges.map((edge, index) => {
             const { frontmatter } = edge.node
             return (
@@ -33,13 +31,8 @@ const Layout = ({ data, avatarUrl }) => {
             )
           })}
         </div>
-      </main>
-      <Footer
-        avatarUrl={avatarUrl}
-        githubLink="https://github.com/evals4dead"
-      />
-      
-    </div>
+      </div>
+    </PageWrapper>
   )
 }
 

@@ -1,6 +1,7 @@
 import React from "react"
 import "./Footer.scss"
 import { Link } from "gatsby"
+import NormalButton from "./NormalButton"
 
 const Footer = ({ avatarUrl, githubLink }) => {
   return (
@@ -8,8 +9,11 @@ const Footer = ({ avatarUrl, githubLink }) => {
       <a href={githubLink} className="ImageWrapper" to="/about">
         <img src={avatarUrl} />
       </a>
-      <div style={{ marginTop: "1rem" }}>
-        <Link to="/tags" className="tagText">Browse by Tag</Link>
+      <div className="footerButtons">
+        <NormalButton to="/tags">Browse By Tags</NormalButton>
+        <NormalButton style={{ marginLeft: "1rem" }} to="/about">
+          About
+        </NormalButton>
       </div>
     </div>
   )

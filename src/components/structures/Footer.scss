@@ -3,6 +3,7 @@
 .Footer {
   height: 8rem;
   background: $oc-gray-4;
+  font-family: "avenir";
 
   display: flex;
   flex-direction: column;
@@ -33,8 +34,9 @@
     }
   }
 
-  .tagText {
-      font-weight: 700;
+  .footerButtons {
+    margin: 0 auto;
+    margin-top: 1rem;
   }
 }
 
