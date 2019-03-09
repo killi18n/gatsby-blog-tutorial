@@ -20,7 +20,10 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, filter: { frontmatter: { title: { ne: "My Projects" } } }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) # filter: { frontmatter: { title: { ne: "My Projects" } } }
+    {
       edges {
         node {
           frontmatter {
