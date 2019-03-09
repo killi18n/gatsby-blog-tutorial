@@ -22,20 +22,19 @@ const Template = ({ data, pageContext }) => {
       </div>
       <div className="BlogPost" dangerouslySetInnerHTML={{ __html: html }} />
       {
-        title !== 'My Projects' && (
-          <div className="Navigator">
-        {prev && (
-          <Link className="prev" to={prev.frontmatter.path}>
-            &lt;-{prev.frontmatter.title}
-          </Link>
-        )}
-        {next && (
-          <Link className="next" to={next.frontmatter.path}>
-            {next.frontmatter.title}-&gt;
-          </Link>
-        )}
-      </div>
-        )
+        // title !== 'My Projects' &&
+        <div className="Navigator">
+          {next && (
+            <Link className="prev" to={next.frontmatter.path}>
+              &lt;-{next.frontmatter.title}
+            </Link>
+          )}
+          {prev && (
+            <Link className="next" to={prev.frontmatter.path}>
+              {prev.frontmatter.title}-&gt;
+            </Link>
+          )}
+        </div>
       }
     </PageWrapper>
   )
