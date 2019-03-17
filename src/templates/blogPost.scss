@@ -1,7 +1,6 @@
 @import "~open-color/open-color";
 @import "~include-media/dist/include-media";
 
-
 .PostTitle__ {
   margin-left: 12rem;
   margin-right: 12rem;
@@ -21,7 +20,28 @@
     margin-left: 1.5rem;
     margin-right: 1.5rem;
   }
+}
 
+.Translations {
+  margin-left: 12rem;
+  margin-right: 12rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  @include media("<=1135px") {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  @include media("<=590px") {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  a {
+    text-decoration: underline;
+    color: $oc-grape-5;
+  }
 }
 
 .BlogPost {
@@ -40,8 +60,6 @@
     margin-left: 1.5rem;
     margin-right: 1.5rem;
   }
-
-  
 
   a {
     text-decoration: underline;
@@ -75,5 +93,4 @@
     margin-left: 1.5rem;
     margin-right: 1.5rem;
   }
-
 }

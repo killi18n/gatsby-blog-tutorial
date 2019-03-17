@@ -1,5 +1,4 @@
 ---
-path: "/another-love-cover"
 date: "2019-03-17"
 title: "톰 오델 - Another Love 커버"
 tags: ["tom odell", "another love", "cover"]

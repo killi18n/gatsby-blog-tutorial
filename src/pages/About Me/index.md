@@ -1,5 +1,4 @@
 ---
-path: "/about/projects"
 date: "2019-03-05"
 title: "My Projects"
 tags: ["about"]

@@ -1,5 +1,4 @@
 ---
-path: "/tom-odell"
 date: "2019-03-17"
 title: "영국의 금단발머리 싱어송 라이터 Tom Odell"
 tags: ["tom odell"]

@@ -1,5 +1,4 @@
 ---
-path: "/github-api"
 date: "2019-02-21"
 title: "Github API (OAuth) 사용법"
 tags: ["github", "github api", "oauth"]

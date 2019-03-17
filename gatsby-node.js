@@ -73,11 +73,14 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       query {
-        allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___date] }) {
+        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
           edges {
             node {
+              fields {
+                slug
+                langKey
+              }
               frontmatter {
-                path
                 title
                 tags
               }
@@ -91,17 +94,61 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
     const posts = result.data.allMarkdownRemark.edges
+    const translatedPosts = posts.filter(
+      post => post.node.fields.langKey !== "ko_KR"
+    )
     createProfilePage(createPage)
     createTagPages(createPage, posts)
     posts.forEach(({ node }, index) => {
-      const path = node.frontmatter.path
+      const { slug, langKey } = node.fields
+
+      if (langKey !== "ko_KR") {
+        createPage({
+          path: slug,
+          component: blogPostTemplate,
+          context: {
+            slug,
+          },
+        })
+        return
+      }
+
+      let prev = null
+      let next = null
+
+      if (index !== 0) {
+        let prevIndex = index - 1
+        while (
+          posts[prevIndex] &&
+          posts[prevIndex].node.fields.langKey !== "ko_KR"
+        ) {
+          prevIndex -= 1
+        }
+        prev = posts[prevIndex]
+      }
+      if (index !== posts.length - 1) {
+        let nextIndex = index + 1
+        while (
+          posts[nextIndex] &&
+          posts[nextIndex].node.fields.langKey !== "ko_KR"
+        ) {
+          nextIndex += 1
+        }
+        next = posts[nextIndex]
+      }
+
+      const translated = translatedPosts.filter(translatedPost =>
+        translatedPost.node.fields.slug.includes(node.fields.slug)
+      )
+
       createPage({
-        path,
+        path: slug,
         component: blogPostTemplate,
         context: {
-          pathSlug: path,
-          prev: index === 0 ? null : posts[index - 1].node,
-          next: index === posts.length - 1 ? null : posts[index + 1].node,
+          slug,
+          prev,
+          next,
+          translatedPosts: translated.length > 0 ? translated : [],
         },
       })
     })

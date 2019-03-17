@@ -12,16 +12,15 @@ const Layout = ({ data, avatarUrl }) => {
       <div className="PostList">
         <div className="innerPostList">
           {edges.map((edge, index) => {
-            const { frontmatter } = edge.node
+            const {
+              frontmatter,
+              fields: { slug, langKey },
+            } = edge.node
             return (
-              <div
-                to={frontmatter.path}
-                className="PostItem"
-                key={frontmatter.path ? frontmatter.path : index}
-              >
+              <div to={frontmatter.path} className="PostItem" key={slug}>
                 <Link
                   className="PostTitle"
-                  to={frontmatter.path}
+                  to={slug}
                   style={{ marginBottom: "1rem" }}
                 >
                   {frontmatter.title}

@@ -6,10 +6,16 @@ import "./blogPost.scss"
 import "prismjs/themes/prism-okaidia.css"
 
 const Template = ({ data, pageContext }) => {
-  const { next, prev } = pageContext
-  const { markdownRemark } = data
-  const title = markdownRemark.frontmatter.title
-  const html = markdownRemark.html
+  console.log(pageContext)
+  console.log(data)
+  const {
+    markdownRemark: {
+      frontmatter: { title },
+      html,
+    },
+  } = data
+  const { next, prev, translatedPosts } = pageContext
+
   return (
     <PageWrapper>
       <SEO
@@ -20,18 +26,25 @@ const Template = ({ data, pageContext }) => {
       <div className="PostTitle__">
         <h1>{title}</h1>
       </div>
+      {translatedPosts &&
+        translatedPosts.length > 0 &&
+        translatedPosts.map(post => (
+          <div key={post.node.fields.slug} className="Translations">
+            Translated with{" "}
+            {<Link to={post.node.fields.slug}>{post.node.fields.langKey}</Link>}
+          </div>
+        ))}
       <div className="BlogPost" dangerouslySetInnerHTML={{ __html: html }} />
       {
-        // title !== 'My Projects' &&
         <div className="Navigator">
-          {next && (
-            <Link className="prev" to={next.frontmatter.path}>
-              &lt;-{next.frontmatter.title}
+          {prev && (
+            <Link className="prev" to={prev.node.fields.slug}>
+              &lt;-{prev.node.frontmatter.title}
             </Link>
           )}
-          {prev && (
-            <Link className="next" to={prev.frontmatter.path}>
-              {prev.frontmatter.title}-&gt;
+          {next && (
+            <Link className="next" to={next.node.fields.slug}>
+              {next.node.frontmatter.title}-&gt;
             </Link>
           )}
         </div>
@@ -41,8 +54,8 @@ const Template = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query($pathSlug: String!) {
-    markdownRemark(frontmatter: { path: { eq: $pathSlug } }) {
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
       frontmatter {
@@ -50,6 +63,43 @@ export const query = graphql`
       }
     }
   }
+  # query {
+  #   allMarkdownRemark(
+  #     sort: { order: DESC, fields: [frontmatter___date] }
+  #     filter: { fields: { langKey: { eq: "ko_KR" } } }
+  #   ) {
+  #     edges {
+  #       node {
+  #         id
+  #         fields {
+  #           slug
+  #         }
+  #         frontmatter {
+  #           title
+  #         }
+  #         html
+  #       }
+  #       next {
+  #         id
+  #         fields {
+  #           slug
+  #         }
+  #         frontmatter {
+  #           title
+  #         }
+  #       }
+  #       previous {
+  #         id
+  #         fields {
+  #           slug
+  #         }
+  #         frontmatter {
+  #           title
+  #         }
+  #       }
+  #     }
+  #   }
+  # }
 `
 
 export default Template

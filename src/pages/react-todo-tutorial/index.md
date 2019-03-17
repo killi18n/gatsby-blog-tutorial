@@ -1,5 +1,4 @@
 ---
-path: "/react-todo-tutorial"
 date: "2019-02-13"
 title: "React Todo 튜토리얼"
 tags: ["react", "todo", "tutorial"]

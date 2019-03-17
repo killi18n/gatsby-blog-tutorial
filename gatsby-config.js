@@ -86,6 +86,13 @@ module.exports = {
         implementation: require("node-sass"),
       },
     },
+    {
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyDefault: "ko_KR",
+        useLangKeyLayout: false,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
