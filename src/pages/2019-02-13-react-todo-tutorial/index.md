@@ -8,7 +8,7 @@ excerpt: "React Todo Tutorial, 리액트로 투두리스트 만들어보기"
 
 # 안내사항
 
-프로젝트 깃헙 주소: https://github.com/evals4dead/todo-react
+프로젝트 깃헙 주소: https://github.com/slave4dead/todo-react
 
 챕터별로 브랜치를 나누어 올려놓았으니, 참고하시면 됩니다.
 
@@ -18,13 +18,13 @@ http://elfin-structure.surge.sh/
 
 # 챕터
 
-1. [프로젝트 준비](https://gist.github.com/evals4dead/57ef0bda5c4570cc0c313233ae3088ae/#1-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%A4%80%EB%B9%84)
-2. [sass 설정](https://gist.github.com/evals4dead/57ef0bda5c4570cc0c313233ae3088ae/#2-sass-%EC%84%A4%EC%A0%95)
-3. [프로젝트 구조 설정](https://gist.github.com/evals4dead/57ef0bda5c4570cc0c313233ae3088ae/#3-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B5%AC%EC%A1%B0-%EC%84%A4%EC%A0%95)
-4. [컴포넌트 작성](https://gist.github.com/evals4dead/57ef0bda5c4570cc0c313233ae3088ae/#4-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EC%9E%91%EC%84%B1)
-5. [Container에서 Todo 상태 관리하기](https://gist.github.com/evals4dead/57ef0bda5c4570cc0c313233ae3088ae/#5-container-%EC%97%90%EC%84%9C-todo-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0)
-6. [반응형 스타일 손보기](https://gist.github.com/evals4dead/57ef0bda5c4570cc0c313233ae3088ae/#6-%EB%B0%98%EC%9D%91%ED%98%95-%EC%8A%A4%ED%83%80%EC%9D%BC-%EC%86%90%EB%B3%B4%EA%B8%B0)
-7. [LocalStorage 로 새로고침하여도 데이터 유지하기](https://gist.github.com/evals4dead/57ef0bda5c4570cc0c313233ae3088ae/#7-localstorage-%EB%A1%9C-%EC%83%88%EB%A1%9C%EA%B3%A0%EC%B9%A8%ED%95%98%EC%97%AC%EB%8F%84-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%9C%A0%EC%A7%80%ED%95%98%EA%B8%B0)
+1. [프로젝트 준비](https://gist.github.com/slave4dead/57ef0bda5c4570cc0c313233ae3088ae/#1-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%A4%80%EB%B9%84)
+2. [sass 설정](https://gist.github.com/slave4dead/57ef0bda5c4570cc0c313233ae3088ae/#2-sass-%EC%84%A4%EC%A0%95)
+3. [프로젝트 구조 설정](https://gist.github.com/slave4dead/57ef0bda5c4570cc0c313233ae3088ae/#3-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B5%AC%EC%A1%B0-%EC%84%A4%EC%A0%95)
+4. [컴포넌트 작성](https://gist.github.com/slave4dead/57ef0bda5c4570cc0c313233ae3088ae/#4-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EC%9E%91%EC%84%B1)
+5. [Container에서 Todo 상태 관리하기](https://gist.github.com/slave4dead/57ef0bda5c4570cc0c313233ae3088ae/#5-container-%EC%97%90%EC%84%9C-todo-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0)
+6. [반응형 스타일 손보기](https://gist.github.com/slave4dead/57ef0bda5c4570cc0c313233ae3088ae/#6-%EB%B0%98%EC%9D%91%ED%98%95-%EC%8A%A4%ED%83%80%EC%9D%BC-%EC%86%90%EB%B3%B4%EA%B8%B0)
+7. [LocalStorage 로 새로고침하여도 데이터 유지하기](https://gist.github.com/slave4dead/57ef0bda5c4570cc0c313233ae3088ae/#7-localstorage-%EB%A1%9C-%EC%83%88%EB%A1%9C%EA%B3%A0%EC%B9%A8%ED%95%98%EC%97%AC%EB%8F%84-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%9C%A0%EC%A7%80%ED%95%98%EA%B8%B0)
 
 # Todo 만들기
 
@@ -114,7 +114,7 @@ yarn start
 ![Imgur](https://i.imgur.com/5xhr8KS.png)
 
 위와같이 덩그러니 App.js 가 새겨진 브라우저를 보실수 있습니다.
-여기까지 진행된 작업은 [링크](https://gist.github.com/evals4dead/57ef0bda5c4570cc0c313233ae3088ae) 에서 확인하실수 있습니다.
+여기까지 진행된 작업은 [링크](https://gist.github.com/slave4dead/57ef0bda5c4570cc0c313233ae3088ae) 에서 확인하실수 있습니다.
 
 ## 2. sass 설정.
 
@@ -226,7 +226,7 @@ $breakpoints: (
 
 불러와 줍니다.
 
-여기까지의 프로젝트는 브랜치(2.setup-sass) [링크](https://github.com/evals4dead/todo-react/tree/2.setup-sass) 에서 보실수 있습니다.
+여기까지의 프로젝트는 브랜치(2.setup-sass) [링크](https://github.com/slave4dead/todo-react/tree/2.setup-sass) 에서 보실수 있습니다.
 
 ## 3. 프로젝트 구조 설정.
 
@@ -320,7 +320,7 @@ serviceWorker.unregister()
 
 다음과같이 index.js 에서 TodoContainer를 불러옵니다.
 
-이때까지의 작업은 모두 [링크](https://github.com/evals4dead/todo-react/tree/3.setup-project-structure) 에서 보실수 있습니다.
+이때까지의 작업은 모두 [링크](https://github.com/slave4dead/todo-react/tree/3.setup-project-structure) 에서 보실수 있습니다.
 
 ## 4. 컴포넌트 작성.
 
@@ -727,7 +727,7 @@ export default TodoItem
 
 위와같이 추가된 아이콘들을 볼수있습니다.
 이제 컴포넌트들을 만드는 작업은 끝났습니다.
-[4.make-components 브랜치](https://github.com/evals4dead/todo-react/tree/4.make-components) 에서 지금까지의 작업을 확인할수 있습니다.
+[4.make-components 브랜치](https://github.com/slave4dead/todo-react/tree/4.make-components) 에서 지금까지의 작업을 확인할수 있습니다.
 
 ## 5. Container 에서 Todo 상태 관리하기.
 
@@ -1461,7 +1461,7 @@ input의 outline이 표시되는게 예쁘지 않은것 같으므로,
 추가해줍니다.
 
 자 이제 투두관련 로직들을 관리하는 컨테이너 작성은 끝난것 같네요.
-이 챕터에서 이때까지 한 작업은 [링크](https://github.com/evals4dead/todo-react/tree/5.container-logics) 에서 보실수 있습니다.
+이 챕터에서 이때까지 한 작업은 [링크](https://github.com/slave4dead/todo-react/tree/5.container-logics) 에서 보실수 있습니다.
 
 ## 6. 반응형 스타일 손보기
 
@@ -1620,7 +1620,7 @@ input {
 
 이제 모바일에서도 최적화 되있음을 볼수있네요.
 
-이 챕터의 작업은 [링크](https://github.com/evals4dead/todo-react/tree/6.flexible-styles) 에서 볼수있습니다.
+이 챕터의 작업은 [링크](https://github.com/slave4dead/todo-react/tree/6.flexible-styles) 에서 볼수있습니다.
 
 ## 7. LocalStorage 로 새로고침하여도 데이터 유지하기.
 
@@ -1802,4 +1802,4 @@ onToggleEdit = id => {
 
 이것또한 흐름은 위 작업들과 같습니다. 변경된 값을 localStorage에 집어넣기만 하면 됩니다.
 
-이 챕터의 작업은 https://github.com/evals4dead/todo-react/tree/7.localStorage 에서 확인할수 있습니다.
+이 챕터의 작업은 https://github.com/slave4dead/todo-react/tree/7.localStorage 에서 확인할수 있습니다.

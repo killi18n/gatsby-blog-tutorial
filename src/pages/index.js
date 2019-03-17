@@ -7,9 +7,9 @@ import "./index.css"
 const IndexPage = ({ data }) => (
   <>
     <SEO
-      title="evals4dead"
+      title="slave4dead"
       keywords={[`react`, `javascript`, `nodejs`]}
-      description="evals4dead's programming blog"
+      description="slave4dead's programming blog"
     />
     <Layout
       data={data}
@@ -21,9 +21,8 @@ const IndexPage = ({ data }) => (
 export const query = graphql`
   query {
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-    ) # filter: { frontmatter: { title: { ne: "My Projects" } } }
-    {
+      sort: { order: DESC, fields: [frontmatter___date] } # filter: { frontmatter: { title: { ne: "My Projects" } } }
+    ) {
       edges {
         node {
           frontmatter {
