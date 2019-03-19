@@ -2,51 +2,52 @@
 @import "~open-color/open-color";
 
 .PostList {
-  
   margin: 0 auto;
   height: 100%;
   padding-top: 2rem;
   padding-bottom: 2rem;
   .innerPostList {
     background: white;
-    margin-left: 5rem;
-  margin-right: 5rem;
-  
-  
+    margin-left: 30rem;
+    margin-right: 30rem;
 
-  @include media("<=590px") {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
+    @include media("<=590px") {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
 
-  border: 1px solid #f1f3f5;
+    border: 1px solid #f1f3f5;
 
-  .PostItem {
-    height: 8rem;
-    padding: 1.25rem;
-
-    .PostTitle {
-      font-weight: 700;
-      font-size: 2rem;
+    .PostItem {
+      height: 8rem;
+      padding: 1.25rem;
 
       @include media("<=590px") {
-        font-size: 1.35rem;
+        height: 6rem;
+      }
+
+      .PostTitle {
+        font-weight: 700;
+        font-size: 1.5rem;
+
+        @include media("<=590px") {
+          font-size: 1rem;
+        }
+      }
+
+      .PostPreview {
+        font-size: 1.25rem;
+        margin-top: 1rem;
+
+        @include media("<=590px") {
+          font-size: 0.75rem;
+        }
       }
     }
 
-    .PostPreview {
-      font-size: 1.25rem;
-      margin-top: 1rem;
-
-      @include media("<=590px") {
-        font-size: 0.95rem;
-      }
+    .PostItem + .PostItem {
+      // margin-top: 1rem;
+      border-top: 1px solid #f1f3f5;
     }
-  }
-
-  .PostItem + .PostItem {
-    // margin-top: 1rem;
-    border-top: 1px solid #f1f3f5;
-  }
   }
 }

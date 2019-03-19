@@ -11,10 +11,10 @@ const Layout = ({ data, avatarUrl }) => {
     <PageWrapper>
       <div className="PostList">
         <div className="innerPostList">
-          {edges.map((edge, index) => {
+          {edges.map(edge => {
             const {
               frontmatter,
-              fields: { slug, langKey },
+              fields: { slug },
             } = edge.node
             return (
               <div to={frontmatter.path} className="PostItem" key={slug}>
