@@ -40,3 +40,9 @@ Github REPO: https://github.com/slave4dead/geact
 A Simple Planner Service App (iOS Only)
 
 Github REPO: https://github.com/slave4dead/Trible
+
+## 6. UnsplashDownloader (Done)
+
+A simple node js service for updating mac's background image.
+
+Github REPO: https://github.com/slave4dead/UnsplashDownloader

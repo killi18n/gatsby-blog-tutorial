@@ -39,12 +39,12 @@ const Template = ({ data, pageContext }) => {
         <div className="Navigator">
           {prev && (
             <Link className="prev" to={prev.node.fields.slug}>
-              &lt;-{prev.node.frontmatter.title}
+              {prev.node.frontmatter.title}
             </Link>
           )}
           {next && (
             <Link className="next" to={next.node.fields.slug}>
-              {next.node.frontmatter.title}-&gt;
+              {next.node.frontmatter.title}
             </Link>
           )}
         </div>
