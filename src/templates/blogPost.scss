@@ -2,8 +2,10 @@
 @import "~include-media/dist/include-media";
 
 .PostTitle__ {
-  margin-left: 12rem;
-  margin-right: 12rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+  max-width: 42rem;
   padding-top: 2rem;
   // padding-bottom: 2rem;
 
@@ -23,8 +25,10 @@
 }
 
 .Translations {
-  margin-left: 12rem;
-  margin-right: 12rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+  max-width: 42rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
 
@@ -46,8 +50,14 @@
 
 .BlogPost {
   min-height: calc(100vh - 16rem);
-  margin-left: 12rem;
-  margin-right: 12rem;
+  // margin-left: 12rem;
+  // margin-right: 12rem;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+  max-width: 42rem;
+
   padding-top: 2rem;
   padding-bottom: 2rem;
 

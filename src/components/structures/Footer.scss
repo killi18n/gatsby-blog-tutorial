@@ -1,8 +1,14 @@
 @import "~open-color/open-color";
 
 .Footer {
-  height: 8rem;
-  background: $oc-gray-4;
+  height: 9rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+  max-width: 42rem;
+  // background: $oc-gray-4;
+  border-top: 1px solid $oc-gray-3;
+  // border-radius: 3px;
   font-family: "avenir";
 
   display: flex;
