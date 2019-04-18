@@ -57,8 +57,8 @@ const createProfilePage = createPage => {
     path: "/about",
     component: profileTemplate,
     context: {
-      username: "slave4dead",
-      githubLink: "https://github.com/slave4dead",
+      username: "killi8n",
+      githubLink: "https://github.com/killi8n",
       avatarUrl:
         "https://avatars2.githubusercontent.com/u/47375524?s=400&u=9c6488c70f08ac60577aff332f10fe50d6cecfd2&v=4",
     },

@@ -8,9 +8,9 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <SEO
-        title="slave4dead"
+        title="Blog"
         keywords={[`react`, `javascript`, `nodejs`]}
-        description="slave4dead's programming blog"
+        description="killi8n's normal blog"
       />
       <Layout
         data={data}

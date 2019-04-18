@@ -21,7 +21,7 @@ const Template = ({ data, pageContext }) => {
       <SEO
         title={title}
         keywords={[`react`, `javascript`, `nodejs`]}
-        description="slave4dead's programming blog"
+        description="killi8n's normal blog"
       />
       <div className="PostTitle__">
         <h1>{title}</h1>
